@@ -6,18 +6,17 @@ const port = process.env.PORT || 3000;
 
 app.engine('.hbs', exphbs({ extname: '.hbs', defaultLayout: 'main'}));
 app.set('view engine', '.hbs');
+// app.use(bodyParser.urlencoded({ extend: true}));
 
 
-app.get("/", (req, res) => {
-    res.send('Hello World!')
-});
+
 
 let givers = [
     { companyName: "Netflix", amount: "$5,000.00"},
     { companyName: "Spodify", amount: "$2,000.00"}
 ]
 
-app.get("/donators", (req, res) => {
+app.get("/", (req, res) => {
     res.render('donators-index', {givers: givers});
 });
 
