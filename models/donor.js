@@ -3,9 +3,9 @@
 const mongoose = require('mongoose');
 
 
-const Donor = mongoose.model('Donors', {
+const Donor = mongoose.model('Donor', {
     companyName: String,
-    amount: String,
+    amount: Number,
     description: String
 });
 
