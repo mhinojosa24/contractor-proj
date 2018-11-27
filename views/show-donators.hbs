@@ -4,10 +4,13 @@
     <a href="/">🔙</a>
 </h3>
 
-<h1>{{donor.companyName}}</h1>
-<h1>{{donor.amount}}</h1>
-<p>{{donor.description}}</p>
+<h1>{{donators.companyName}}</h1>
+<h1>{{donators.amount}}</h1>
+<p>{{donators.description}}</p>
 
-<button type="submit" name="editBtn">
+<!-- <button type="submit" name="editBtn">
     <a href="/donors/{{donor._id}}/edit">Edit</a>
-</button>
+</button> -->
+<p>
+    <a href="/donors/{{donators._id}}/edit">Edit</a>
+</p>
