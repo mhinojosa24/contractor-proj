@@ -1,11 +1,16 @@
 <!-- views/new-donators.hbs -->
 
+<div class="row">
+    <div class="col-sm-6 col-cm-offset-3">
+
+    </div>
+</div>
 <form method="POST" action="/donors" >
     {{> donors-form}}
 
     <!-- BUTTON -->
     <p>
-        <button type="submit">Donate!</button>
+        <button  type="submit">Donate!</button>
         <input class="btn btn-primary" type="button" value="Go back!" onclick="history.back()">
     </p>
 </form>

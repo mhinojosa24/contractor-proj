@@ -3,9 +3,11 @@
 
 <a href="/donors/new">Make a Donation?</a>
 
-{{#each donators}}
-    <h2>
-        <a href="/donors/{{this._id}}">{{this.companyName}}</a>
-    </h2>
-    <small>{{this.amount}}</small>
-{{/each}}
+<div class="row">
+    {{#each donators}}
+        <div >
+            <h2><a href="/donors/{{this._id}}">{{this.companyName}}</a></h2>
+            <small>{{this.amount}}</small>
+        </div>
+    {{/each}}
+</div>

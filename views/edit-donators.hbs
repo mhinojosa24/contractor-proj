@@ -1,10 +1,13 @@
 <!-- views/edit-donators.hbs -->
 
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+        <form method="POST" action="/donors/{{donators._id}}?_method=PUT" >
+            {{> donors-form}}
 
-<form method="POST" action="/donors/{{donators._id}}?_method=PUT" >
-    {{> donors-form}}
-
-    <!-- BUTTON -->
-    <button type="submit" name="savebtn">Save</button>
-    <input class="btn btn-primary" type="button" value="Go back!" onclick="history.back()">
-</form>
+            <!-- BUTTON -->
+            <button class="btn btn-primary" type="submit" name="savebtn">Save</button>
+            <input class="btn btn-primary" type="button" value="Go back!" onclick="history.back()">
+        </form>
+    </div>
+</div>

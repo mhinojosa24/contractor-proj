@@ -23,7 +23,7 @@ module.exports = function(app) {
     app.post('/donors', (req, res) => {
         Donor.create(req.body).then((donators) => {
             console.log(donators)
-            res.redirect(`/donors/${donor._id}`);
+            res.redirect(`/donors/${donators._id}`);
         }).catch((err) => {
             console.log(err.message);
         });

@@ -8,13 +8,10 @@
 <h1>{{donators.amount}}</h1>
 <p>{{donators.description}}</p>
 
-<!-- <button type="submit" name="editBtn">
-    <a href="/donors/{{donor._id}}/edit">Edit</a>
-</button> -->
 <p><a href="/donors/{{donators._id}}/edit">Edit</a></p>
 <!-- delete button -->
 <p>
-    <form method="POST" action="/reviews/{{review._id}}?_method=DELETE">
+    <form method="POST" action="/donors/{{donators._id}}?_method=DELETE">
         <button class="btn btn-primary" type="submit">Delete</button>
     </form>
 </p>
