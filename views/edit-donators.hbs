@@ -1,0 +1,9 @@
+<!-- views/edit-donators.hbs -->
+
+
+<form action=".donors/{{donor._id}}?_method=PUT" method="POST">
+    {{> donors-form}}
+
+    <!-- BUTTON -->
+    <button type="submit" name="savebtn">Save</button>
+</form>

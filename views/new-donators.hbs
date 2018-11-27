@@ -1,26 +1,9 @@
 <!-- views/new-donators.hbs -->
 
 <form class="" action="/donors" method="POST">
-    <fieldset>
-        <legend>Make a donation!</legend>
-        <!-- TITLE -->
-        <p>
-            <label for="title">Company Name</label>
-            <input id="company-title" type="text" name="companyName">
-        </p>
-        <!-- AMOUNT TITLE -->
-        <p>
-            <label for="amount">Amount</label>
-            <input id="amount-title" type="number" name="amount" >
-        </p>
-        <!-- DESCRIPTION -->
-        <p>
-            <label for="description-text">Description</label>
-            <textarea id="description-text" name="description" rows="10"></textarea>
-        </p>
-    </fieldset>
+    {{> donors-form}}
 
-    <!-- button -->
+    <!-- BUTTON -->
     <p>
         <button type="submit">Donate!</button>
     </p>

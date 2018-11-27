@@ -1,0 +1,23 @@
+<!-- views/partials/donors-form.hbs -->
+
+<fieldset>
+    <!-- TITLE -->
+    <legend>Edit Donation</legend>
+
+    <!-- COMPANY NAME -->
+    <p>
+        <label for="title">Company Name</label>
+        <input id="company-title" type="text" name="companyName" value="{{donor.companyName}}">
+    </p>
+
+    <!-- AMOUNT TITLE -->
+    <p>
+        <label for="amount">Amount</label>
+        <input id="amount-title" type="number" name="amount" value="{{donor.amount}}">
+    </p>
+    <!-- DESCRIPTION -->
+    <p>
+        <label for="description-text">Description</label>
+        <textarea id="description-text" name="description" rows="10">{{donor.description}}</textarea>
+    </p>
+</fieldset>

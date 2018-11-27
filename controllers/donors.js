@@ -37,4 +37,21 @@ module.exports = function(app) {
             console.log(err.message);
         });
     });
+
+    // edit
+    app.get('/donors/:id/edit', (rqe, res) => {
+        Donor.findById(req.params.id, (err, donor) => {
+            res.render('edit-donators', {donor: donor});
+        });
+    });
+
+    // update
+    app.put('/donors/:id', (req, res) => {
+        Donor.findByIdAndUpdate(req.params.id, req.body)
+            .then(donor => {
+                res.redirect(`/reviews/${donor._id}`)
+            }).catch(err => {
+                console.log(err.message);
+            });
+    });
 }
