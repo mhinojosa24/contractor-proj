@@ -1,13 +1,17 @@
 <!-- views/all-donators.hbs -->
-<h1>Donaters</h1>
 
-<a href="/donors/new">Make a Donation?</a>
+<h1 class="all-donators" >Donators</h1>
+
+<a class="tag" href="/donors/new">Make a Donation?</a>
 
 <div class="row">
     {{#each donators}}
-        <div >
-            <h2><a href="/donors/{{this._id}}">{{this.companyName}}</a></h2>
-            <small>{{this.amount}}</small>
+        <div class="card w-75">
+            <div class="col-sm-3">
+                <h3 class="card-title"><a href="/donors/{{this._id}}">{{this.companyName}}</a></h3>
+                <small>${{this.amount}}</small>
+                <p class="card-text">{{this.description}}</p>
+            </div>
         </div>
     {{/each}}
 </div>

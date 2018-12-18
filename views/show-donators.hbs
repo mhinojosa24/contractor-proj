@@ -1,11 +1,12 @@
 <!-- views/show-donators.hbs -->
 
-<h3>
+<h1 class="display-3">
     <a href="/">🔙</a>
-</h3>
+</h1>
+
 
 <h1>{{donators.companyName}}</h1>
-<h1>{{donators.amount}}</h1>
+<h1>${{donators.amount}}</h1>
 <p>{{donators.description}}</p>
 
 <p><a href="/donors/{{donators._id}}/edit">Edit</a></p>
