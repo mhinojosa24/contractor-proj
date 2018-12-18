@@ -21,14 +21,14 @@ module.exports = function(app) {
 
     // create
     app.post('/donors', (req, res) => {
-        if (req.body.companyName != "", function(){
+        // if (req.body.companyName != "", function(){
             Donor.create(req.body).then((donator) => {
                 console.log(donator)
                 res.redirect(`/donors/${donator._id}`);
             }).catch((err) => {
                 console.log(err.message);
             });
-        });// } else {
+        // });// } else {
         //     popup.alert({
         //         content: 'Hello!'
         //     })
